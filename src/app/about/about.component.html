@@ -1,0 +1,43 @@
+<div>
+    <div class='splash'>
+        <img src="https://live.staticflickr.com/65535/48953947006_aeaecbbca9_3k.jpg" alt="rocket">
+    </div>
+    <div class='container' 
+         *ngIf='info != null; else showLoading' 
+         [@revealPage]='pageHidden ? "hidden" : "visible"'>
+        <h2><span style='font-size: 50px;'>{{ info.name }}</span>{{ info.summary }}</h2>
+        <p>
+            Founded in 
+            <span>{{ info.founded }}</span>
+            , SpaceX now has over 
+            <span>{{ info.employees }}</span>
+             employees. Due to the efforts of our staff and team, our current valuation is 
+            <span>{{ info.valuationFormatted }}</span>
+            .
+        </p>
+
+        <div class='image-wrap'>
+            <img [src]="image_musk" alt="elon_musk">
+        </div>
+        <div class='bio-musk'>
+            <h1>{{ info.founder }}</h1>
+            <h3>Founder, CEO, CTO</h3>
+        </div>
+
+        <h1>Where to find us</h1>
+        <div class='info-grid'>
+            <div class='header'>Our Headquarters</div>
+            <div class='header' style='grid-column: 2 / span 4;'>Social Media</div>
+
+            <div [innerHTML]='info.headquartersFull' class='item'></div>
+            <div class='item single-line'><a href="https://twitter.com/spacex" target='_blank'>Twitter</a></div>
+            <div class='item single-line'><a href="https://www.youtube.com/spacex" target='_blank'>Youtube</a></div>
+            <div class='item single-line'><a href="https://www.flickr.com/spacexphotos" target='_blank'>Flickr</a></div>
+            <div class='item single-line'><a href="https://www.instagram.com/spacex" target='_blank'>Instagram</a></div>
+        </div>
+    </div>
+</div>
+
+<ng-template #showLoading>
+    <app-spinner></app-spinner>
+</ng-template>

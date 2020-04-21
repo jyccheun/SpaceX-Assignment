@@ -1,0 +1,105 @@
+.splash {
+    top: 64px;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 64px;
+}
+
+.splash > img {
+    position: absolute;
+    bottom: -270px;
+    opacity: 70%;
+    margin-left: calc(-960px + 80%);
+}
+
+.container {
+    width: 1500px;
+    flex: 1 1 auto;
+    flex-direction: row;
+    margin: auto;
+    padding: 20px 0 84px 0;
+}
+
+.container > h1 {
+    color: white;
+    top: 182px;
+    position: absolute;
+}
+
+/* card */
+.card-container {
+    border: 2px solid #a7a9ac;
+    /* background-color: #a7a9ac; */
+    color: white;
+    height: 550px;
+    width: 100%;
+}
+
+.card-wrap {
+    background-color: rgb(15, 15, 15);
+    height: 526px;
+    margin: 2px;
+    padding: 10px
+}
+
+.rocket-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.card-title {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9));
+    width: calc(100% - 28px);
+    top: 173px;
+    position: absolute;
+}
+
+.card-title > p {
+    font-size: 26px;
+}
+
+.card-content {
+    height: 300px;
+    overflow: auto;
+    margin: 13px 0;
+}
+
+p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin: 5px;
+    font-size: 18px;
+}
+
+p.desc {
+    line-height: 1.6;
+}
+
+.icon {
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #a7a9ac;
+    overflow: hidden;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    background: #000000;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #a7a9ac;
+}

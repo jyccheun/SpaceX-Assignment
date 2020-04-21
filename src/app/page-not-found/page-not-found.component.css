@@ -1,0 +1,17 @@
+.container {
+    width: 90%;
+    height: calc(100% - 64px);
+    margin: auto;
+}
+
+.message {
+    padding-top: 400px;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+}
+
+.icon {
+    padding-bottom: 6px;
+    vertical-align: middle;
+}

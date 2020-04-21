@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'space-x-assignment';
+  title = 'Space X';
+
+  toolbarItems = [
+    { key: 'history', name: 'History' },
+    { key: 'rockets', name: 'Rockets' },
+    { key: 'about', name: 'About' }
+  ];
+
+  // listener for footer component
+  captureEmittedData(emittedData) {
+    console.log(emittedData);
+  }
 }

@@ -1,0 +1,46 @@
+.toolbar {
+    position: fixed;
+    z-index: 999;
+    border-bottom: 1px solid #a7a9ac;
+}
+
+.toolbar-title-wrapper {
+    height: 64px;
+    overflow: hidden;
+    margin-left: 40px;
+}
+
+.toolbar-title {
+    font-size: 58px; 
+    font-style: italic;
+    margin-top: -125px;
+    margin-right: -55px;
+    margin-left: -40px;
+    width: 400px;
+    height: auto;
+}
+
+ul.toolbar-panel {
+    padding-inline-start: 0 !important;
+}
+
+ul.toolbar-panel li {
+    display: inline;
+}
+
+.toolbar-item {
+    display: inline-block;
+    padding: 0 10px;
+    height: 64px;
+    line-height: 64px;
+    color: #005288;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a.toolbar-item:hover {
+    background-color: rgb(216, 216, 216);
+}

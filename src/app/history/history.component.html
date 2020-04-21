@@ -1,0 +1,30 @@
+<div>
+    <div class='splash'>
+        <img src="https://live.staticflickr.com/5717/21236738100_64d6af28c6_k.jpg" alt="Dragon to Mars">
+    </div>
+    <div class='container'>
+        <h1>SPACEX   <mat-icon class='icon'>arrow_forward_ios</mat-icon>   HISTORY</h1>
+        <mat-grid-list  cols='3' rowHeight='254px' gutterSize='15px' 
+                        *ngIf='histories.length > 0; else showLoading' 
+                        [@revealPage]='pageHidden ? "hidden" : "visible"'>
+            <mat-grid-tile *ngFor="let history of histories">
+                <div class='card-container'>
+                    <div class='card-wrap'>
+                        <div class='card-content'>
+                            <p class='card-title'>{{ history.title }}</p>
+                            <p class='card-flight'>Flight Number: 
+                                <span *ngIf='history.flight_number != null; else showNA'>{{ history.flight_number }}</span>
+                                <ng-template #showNA>N/A</ng-template>
+                            </p>
+                            <p class='card-details'>{{ history.details }}</p>
+                        </div>
+                    </div>
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+</div>
+
+<ng-template #showLoading>
+    <app-spinner></app-spinner>
+</ng-template>

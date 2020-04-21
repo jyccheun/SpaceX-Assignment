@@ -1,0 +1,83 @@
+.splash {
+    top: 64px;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 64px;
+}
+
+.splash > img {
+    position: absolute;
+    bottom: -700px;
+    opacity: 70%;
+    margin-left: calc(-1638px + 80%);
+}
+
+.container {
+    width: 1500px;
+    flex: 1 1 auto;
+    flex-direction: row;
+    margin: auto;
+    padding: 20px 0 84px 0;
+}
+
+.container > h1 {
+    color: white;
+    top: 182px;
+    position: absolute;
+}
+
+.container > a {
+    color: white;
+    top: 100px;
+    position: absolute;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+p {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+p.desc {
+    line-height: 1.6;
+}
+
+h2 {
+    color: #ffffff;
+    margin: 20px 0 20px 15px;
+}
+
+.info-grid {
+    background-color: rgb(15, 15, 15);
+    font-size: 20px;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+.info-grid > .header {
+    color: #a7a9ac;
+    font-size: 20px;
+}
+
+.info-grid > .item {
+    color: #ffffff;
+    font-size: 26px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 20px;
+    grid-gap: 20px;
+}
+
+.image-grid > img {
+    height: 300px;
+    width: 100%;
+    border: 2px solid #a7a9ac;
+    object-fit: cover;
+}

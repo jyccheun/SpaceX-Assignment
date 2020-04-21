@@ -1,0 +1,38 @@
+<div>
+    <div class='splash'>
+        <img src="https://live.staticflickr.com/8641/16490359747_8b05dcd94e_k.jpg" alt="rocket">
+    </div>
+    <div class='container'>
+        <a routerLink='/rockets'><mat-icon>keyboard_backspace</mat-icon></a>
+        <h1>
+            SPACEX   <mat-icon>arrow_forward_ios</mat-icon>
+            <span *ngIf='rocket' [@revealPage]='pageHidden ? "hidden" : "visible"'>  {{ rocket.name }}</span>
+        </h1>
+        <div *ngIf='rocket; else showLoading' 
+             [@revealPage]='pageHidden ? "hidden" : "visible"'>
+            <p class='desc'>{{ rocket.description }}</p>
+            <h2>Details</h2>
+            <div class='info-grid'>
+                <div class='header'>Country</div>
+                <div class='header'>First Flight</div>
+                <div class='header'>Height</div>
+                <div class='header'>Diameter</div>
+                <div class='header'>Mass</div>
+    
+                <div class='item'>{{ rocket.country }}</div>
+                <div class='item'>{{ rocket.first_flight_formatted }}</div>
+                <div class='item'>{{ rocket.metricHeight }} m</div>
+                <div class='item'>{{ rocket.metricDiameter }} m</div>
+                <div class='item'>{{ rocket.metricMass }} kg</div>
+            </div>
+            <h2>Gallery</h2>
+            <div class='image-grid'>
+                <img *ngFor='let image of rocket.flickr_images' [src]='image' alt='rocket.name'>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #showLoading>
+    <app-spinner></app-spinner>
+</ng-template>

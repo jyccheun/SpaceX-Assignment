@@ -1,0 +1,12 @@
+<mat-toolbar color='white' class='toolbar'>
+    <mat-toolbar-row>
+      <a routerLink='' class='toolbar-title-wrapper'>
+        <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/spacex-logo.png" alt="SpaceX" class='toolbar-title'>
+      </a>
+      <ul class='toolbar-panel'>
+        <li *ngFor='let item of toolbarItems'>
+          <a [routerLink]='item.key' class='toolbar-item'>{{ item.name }}</a>
+        </li>
+      </ul>
+    </mat-toolbar-row>
+  </mat-toolbar>
